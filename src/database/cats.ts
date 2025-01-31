@@ -1,8 +1,50 @@
-export const cats = [
+export const DataCats = [
   {
     id: '1',
     name: 'Bob',
     description: 'A cat named Bob',
-    
+    age: 5,
+    race: 'Abyssinian',
+    available: true,
+  },
+  {
+    id: '2',
+    name: 'Arura',
+    description: 'A cat named Arura',
+    age: 5,
+    race: 'Abyssinian',
+    available: true,
+  },
+  {
+    id: '3',
+    name: 'Jhony',
+    description: 'A cat named Jhony',
+    age: 6,
+    race: 'Bengal',
+    available: false,
+  },
+  {
+    id: '4',
+    name: 'Jimmy',
+    description: 'A cat named Jimmy',
+    age: 4,
+    race: 'Bengal',
+    available: true,
+  },
+  {
+    id: '5',
+    name: 'Uro',
+    description: 'A cat named Uro',
+    age: 5,
+    race: 'Balinese ',
+    available: true,
+  },
+  {
+    id: '6',
+    name: 'Tigo',
+    description: 'A cat named Tigo',
+    age: 7,
+    race: 'Maine Coon ',
+    available: true,
   }
 ]
