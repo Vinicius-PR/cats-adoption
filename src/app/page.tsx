@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { DataCats } from '../database/cats'
+import { DataCats, DataLocation } from '../database/cats'
 
 export default function Home() {
   return (
@@ -23,6 +23,7 @@ export default function Home() {
                   </span>
                 </p>
                 <p>Description: { cat.description }</p>
+                <p>Location: {DataLocation.find((location) => location.id === cat.location)}</p>
               </div>
             )
           })
