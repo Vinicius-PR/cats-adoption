@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from 'next/link';
 import { DataCats, DataLocation } from '../database/cats'
 
 export default function Home() {
@@ -11,6 +11,13 @@ export default function Home() {
       <main>
         {
           DataCats.map((cat) => {
+            const locationData = DataLocation.find((location) => location.id === cat.location)
+            let location = ''
+            if (locationData) {
+              console.log(location)
+              location = locationData.name
+            }
+
             return (
               <div key={cat.id}>
                 <h2>{cat.name}</h2>
@@ -23,7 +30,8 @@ export default function Home() {
                   </span>
                 </p>
                 <p>Description: { cat.description }</p>
-                <p>Location: {DataLocation.find((location) => location.id === cat.location)}</p>
+                <p>Location: {location}</p>
+                <Link href={`http://localhost:3000/cats/${cat.id}`}>Click here</Link>
               </div>
             )
           })
